@@ -1,4 +1,4 @@
-package com.example.cheshta.crashcourse;
+package com.example.cheshta.crashcourse.scene;
 
 import android.graphics.Canvas;
 import android.view.MotionEvent;

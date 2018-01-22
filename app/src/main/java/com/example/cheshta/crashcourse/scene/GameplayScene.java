@@ -1,4 +1,4 @@
-package com.example.cheshta.crashcourse;
+package com.example.cheshta.crashcourse.scene;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -6,6 +6,10 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.view.MotionEvent;
+
+import com.example.cheshta.crashcourse.consts.Constants;
+import com.example.cheshta.crashcourse.obstacle.ObstacleManager;
+import com.example.cheshta.crashcourse.player.RectPlayer;
 
 /**
  * Created by chesh on 1/22/2018.

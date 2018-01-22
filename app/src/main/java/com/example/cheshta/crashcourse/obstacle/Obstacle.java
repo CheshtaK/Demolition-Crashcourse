@@ -1,8 +1,12 @@
-package com.example.cheshta.crashcourse;
+package com.example.cheshta.crashcourse.obstacle;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+
+import com.example.cheshta.crashcourse.consts.Constants;
+import com.example.cheshta.crashcourse.game.GameObject;
+import com.example.cheshta.crashcourse.player.RectPlayer;
 
 /**
  * Created by chesh on 1/21/2018.

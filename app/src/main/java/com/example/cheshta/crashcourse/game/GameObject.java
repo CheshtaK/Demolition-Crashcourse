@@ -1,4 +1,4 @@
-package com.example.cheshta.crashcourse;
+package com.example.cheshta.crashcourse.game;
 
 import android.graphics.Canvas;
 

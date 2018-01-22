@@ -1,11 +1,13 @@
 package com.example.cheshta.crashcourse;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.cheshta.crashcourse.consts.Constants;
+import com.example.cheshta.crashcourse.game.GamePanel;
 
 public class MainActivity extends Activity {
 

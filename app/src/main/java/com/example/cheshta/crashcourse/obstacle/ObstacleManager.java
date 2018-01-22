@@ -1,8 +1,11 @@
-package com.example.cheshta.crashcourse;
+package com.example.cheshta.crashcourse.obstacle;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+
+import com.example.cheshta.crashcourse.consts.Constants;
+import com.example.cheshta.crashcourse.player.RectPlayer;
 
 import java.util.ArrayList;
 
@@ -45,7 +48,7 @@ public class ObstacleManager {
     }
 
     private void populateObstacles(){
-        int currY = -5*Constants.SCREEN_HEIGHT/4;
+        int currY = -5* Constants.SCREEN_HEIGHT/4;
         while(currY < 0){
             int xStart = (int)(Math.random()*(Constants.SCREEN_WIDTH - playerGap));
             obstacles.add(new Obstacle(obstacleHeight, color, xStart, currY, playerGap));
@@ -54,6 +57,8 @@ public class ObstacleManager {
     }
 
     public void update(){
+        if(startTime < Constants.INIT_TIME)
+            startTime = Constants.INIT_TIME;
         int elapsedTime = (int)(System.currentTimeMillis() - startTime);
         startTime = System.currentTimeMillis();
         float speed = (float)(Math.sqrt(1 + (startTime - initTime)/2000.0)) * Constants.SCREEN_HEIGHT/(10000.0f);

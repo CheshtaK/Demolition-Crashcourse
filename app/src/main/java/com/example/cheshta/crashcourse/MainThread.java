@@ -3,6 +3,8 @@ package com.example.cheshta.crashcourse;
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 
+import com.example.cheshta.crashcourse.game.GamePanel;
+
 /**
  * Created by chesh on 1/21/2018.
  */
