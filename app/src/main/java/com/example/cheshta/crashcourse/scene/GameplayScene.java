@@ -37,7 +37,7 @@ public class GameplayScene implements Scene {
         playerPoint = new Point(Constants.SCREEN_WIDTH/2, 3*Constants.SCREEN_HEIGHT/4);
         player.update(playerPoint);
 
-        obstacleManager = new ObstacleManager(200,350,75,Color.BLACK);
+        obstacleManager = new ObstacleManager(350,550,100,Color.BLACK);
 
         orientationData = new OrientationData();
         orientationData.register();
@@ -47,7 +47,7 @@ public class GameplayScene implements Scene {
     public void reset(){
         playerPoint = new Point(Constants.SCREEN_WIDTH/2, 3*Constants.SCREEN_HEIGHT/4);
         player.update(playerPoint);
-        obstacleManager = new ObstacleManager(200,350,75,Color.BLACK);
+        obstacleManager = new ObstacleManager(350,550,100,Color.BLACK);
         movingPlayer = false;
     }
 
@@ -62,8 +62,8 @@ public class GameplayScene implements Scene {
                 float pitch = orientationData.getOrientation()[1] - orientationData.getStartOrientation()[1];
                 float roll = orientationData.getOrientation()[2] - orientationData.getStartOrientation()[2];
 
-                float xSpeed = 2 * roll * Constants.SCREEN_WIDTH/1000f;
-                float ySpeed = pitch * Constants.SCREEN_HEIGHT/1000f;
+                float xSpeed = 2 * roll * Constants.SCREEN_WIDTH/2500f;
+                float ySpeed = pitch * Constants.SCREEN_HEIGHT/2500f;
 
                 playerPoint.x += Math.abs(xSpeed*elapsedTime) > 5 ? xSpeed*elapsedTime : 0;
                 playerPoint.y -= Math.abs(ySpeed*elapsedTime) > 5 ? ySpeed*elapsedTime : 0;
